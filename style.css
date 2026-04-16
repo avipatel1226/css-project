@@ -2,7 +2,7 @@
    Avi Patel
    COMP1054 */
 
-/* Color variables */
+/* Main colors for the page */
 :root {
   --bg-color: #f5f5f5;
   --text-color: #222;
@@ -10,14 +10,15 @@
   --card-bg: #ffffff;
 }
 
-/* Basic reset */
+/* Basic reset
+   Written for this project using common reset ideas */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Page styles */
+/* General page styling */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -25,7 +26,7 @@ body {
   color: var(--text-color);
 }
 
-/* Headings and text */
+/* Headings and paragraphs */
 h1, h2, h3, h4 {
   margin-bottom: 10px;
 }
@@ -43,14 +44,15 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Shared container */
+/* Shared page width */
 .container {
   max-width: 1100px;
+  width: 90%;
   margin: auto;
   padding: 20px;
 }
 
-/* Header styles */
+/* Top banner area */
 header {
   background: #ffffff;
   text-align: center;
@@ -69,7 +71,8 @@ header h2 {
   margin-bottom: 15px;
 }
 
-/* Navigation */
+/* Main nav
+   Built with flexbox from class concepts */
 nav {
   background: #222;
 }
@@ -90,18 +93,21 @@ nav a {
   padding: 10px 15px;
   color: white;
   font-weight: bold;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 nav a:hover {
   background: var(--accent);
   border-radius: 5px;
+  text-decoration: none;
 }
-/* Main area */
+
+/* Main page area */
 main {
   padding: 30px 0;
 }
 
-/* Main content blocks */
+/* Main content cards */
 article section,
 .profile,
 #styles,
@@ -112,12 +118,12 @@ article section,
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Extra spacing inside sections */
+/* Space inside the article sections */
 article section {
   padding: 25px;
 }
 
-/* Blockquote */
+/* Blockquote styling */
 blockquote {
   background: #eef6ff;
   border-left: 5px solid var(--accent);
@@ -125,7 +131,7 @@ blockquote {
   margin: 20px 0;
 }
 
-/* Lists */
+/* Lists inside content */
 ul,
 ol {
   margin-left: 20px;
@@ -136,7 +142,7 @@ li {
   margin-bottom: 8px;
 }
 
-/* Profile sidebar section */
+/* Sidebar area on the profile card */
 .profile {
   padding: 20px;
 }
@@ -150,7 +156,7 @@ li {
   margin-bottom: 10px;
 }
 
-/* Featured styles section */
+/* Featured styles area */
 #styles {
   padding: 20px;
 }
@@ -168,7 +174,12 @@ li {
   border-left: 4px solid var(--accent);
   border-radius: 6px;
 }
-/* Footer section */
+
+.features a {
+  font-weight: bold;
+}
+
+/* Footer area */
 .page-footer {
   padding: 30px 20px;
   background: #1f1f1f;
@@ -190,7 +201,7 @@ li {
   margin-bottom: 10px;
 }
 
-/* Buttons / special links */
+/* Main action links */
 .link-github,
 .link-guidelines,
 .link-allstyles,
@@ -213,7 +224,8 @@ li {
   text-decoration: none;
 }
 
-/* Skip link */
+/* Skip link for keyboard users
+   Accessibility idea based on standard web practice */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -229,7 +241,35 @@ li {
   z-index: 1000;
 }
 
-/* Responsive layout for larger screens */
+/* A few extra heading tweaks */
+h2,
+h3,
+h4 {
+  color: #1e4f7a;
+}
+
+article section h2 {
+  border-bottom: 2px solid #d9e7f2;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+.profile h4,
+#styles h2,
+.page-footer p:first-child {
+  margin-bottom: 15px;
+}
+
+/* Readability */
+article section p,
+article section li,
+.profile li,
+.page-footer li {
+  font-size: 1rem;
+}
+
+/* Desktop layout
+   Uses grid and media queries covered in class */
 @media (min-width: 900px) {
   main .container {
     display: grid;
@@ -264,51 +304,8 @@ li {
     gap: 20px;
   }
 }
-/* Better heading colors */
-h2,
-h3,
-h4 {
-  color: #1e4f7a;
-}
 
-/* Make article sections feel cleaner */
-article section h2 {
-  border-bottom: 2px solid #d9e7f2;
-  padding-bottom: 8px;
-  margin-bottom: 18px;
-}
-
-/* Improve nav hover and active feel */
-nav a {
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-/* Better card spacing */
-.profile h4,
-#styles h2,
-.page-footer p:first-child {
-  margin-bottom: 15px;
-}
-
-/* Make featured style links stand out */
-.features a {
-  font-weight: bold;
-}
-
-/* Slightly nicer body width on very large screens */
-.container {
-  width: 90%;
-}
-
-/* Readability improvement */
-article section p,
-article section li,
-.profile li,
-.page-footer li {
-  font-size: 1rem;
-}
-
-/* Small screen polish */
+/* Small screen adjustments */
 @media (max-width: 600px) {
   header h1 {
     font-size: 2rem;
@@ -330,3 +327,8 @@ article section li,
     margin: 15px auto;
   }
 }
+
+/* Built this layout using flexbox and grid from class
+   Tried to keep it responsive for mobile and desktop */
+
+/* Colors and overall styling are my own for this project */
