@@ -2,16 +2,21 @@
    Avi Patel
    COMP1054 */
 
-/* Main colors */
+/* Fix layout shift on smaller screens */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Color variables */
 :root {
   --bg-color: #f6f1ea;
   --text-color: #2d2a26;
   --accent: #8b3d2e;
   --accent-dark: #6f2f23;
-  --accent-light: #d9b8a0;
   --card-bg: #fffaf5;
   --nav-bg: #2d2a26;
-  --soft-blue: #eef4f8;
   --border-color: #e1d4c7;
 }
 
@@ -22,7 +27,7 @@
   box-sizing: border-box;
 }
 
-/* General page */
+/* Page styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.7;
@@ -30,7 +35,7 @@ body {
   color: var(--text-color);
 }
 
-/* Text */
+/* Headings and text */
 h1, h2, h3, h4 {
   margin-bottom: 12px;
   line-height: 1.2;
@@ -56,12 +61,12 @@ a:hover {
 /* Container */
 .container {
   max-width: 1150px;
-  width: 90%;
-  margin: auto;
-  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* Header */
+/* Header styles */
 header {
   background: linear-gradient(135deg, #fffaf5, #efe3d6);
   text-align: center;
@@ -72,14 +77,12 @@ header {
 header h1 {
   font-size: 3rem;
   color: var(--accent);
-  margin-bottom: 10px;
 }
 
 header h2 {
   font-size: 1.2rem;
   color: #5c534c;
-  max-width: 650px;
-  margin: 0 auto 15px;
+  margin-bottom: 15px;
 }
 
 /* Navigation */
@@ -106,19 +109,18 @@ nav a {
   color: white;
   font-weight: bold;
   border-radius: 6px;
-  transition: background 0.2s ease;
 }
 
 nav a:hover {
   background: var(--accent);
 }
 
-/* Main */
+/* Main area */
 main {
   padding: 35px 0;
 }
 
-/* Cards */
+/* Main content blocks */
 article section,
 .profile,
 #styles {
@@ -127,17 +129,19 @@ article section,
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--border-color);
+  max-width: 1150px;
 }
 
+/* Extra spacing inside sections */
 article section {
   padding: 28px;
 }
 
 article section h2 {
-  color: #1f4f73;
   border-bottom: 2px solid #d9e6ef;
   padding-bottom: 8px;
   margin-bottom: 18px;
+  color: #1f4f73;
 }
 
 h3, h4 {
@@ -146,7 +150,7 @@ h3, h4 {
 
 /* Blockquote */
 blockquote {
-  background: var(--soft-blue);
+  background: #eef4f8;
   border-left: 5px solid var(--accent);
   padding: 18px 22px;
   margin: 22px 0;
@@ -154,7 +158,8 @@ blockquote {
 }
 
 /* Lists */
-ul, ol {
+ul,
+ol {
   margin-left: 20px;
   margin-bottom: 16px;
 }
@@ -163,38 +168,9 @@ li {
   margin-bottom: 8px;
 }
 
-/* Buttons */
-.link-github,
-.link-guidelines,
-.link-allstyles,
-.link-downloadcss,
-.link-downloadhtml {
-  display: inline-block;
-  background: var(--accent);
-  color: white;
-  padding: 11px 16px;
-  border-radius: 8px;
-  margin-top: 10px;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-
-.link-github:hover,
-.link-guidelines:hover,
-.link-allstyles:hover,
-.link-downloadcss:hover,
-.link-downloadhtml:hover {
-  background: var(--accent-dark);
-  text-decoration: none;
-}
-
-/* Profile */
+/* Profile sidebar section */
 .profile {
   padding: 22px;
-}
-
-.profile h4 {
-  margin-bottom: 15px;
 }
 
 .profile ul {
@@ -204,14 +180,11 @@ li {
 
 .profile li {
   margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-color);
 }
 
-/* Featured styles */
+/* Featured styles section */
 #styles {
   padding: 22px;
-  background: #f3f0ea; /* slight variation */
 }
 
 .features {
@@ -226,32 +199,18 @@ li {
   padding: 18px;
   border-left: 5px solid var(--accent);
   border-radius: 8px;
-  transition: transform 0.2s ease;
 }
 
-.features li:hover {
-  transform: translateY(-3px);
-}
-
-.features a {
-  font-weight: bold;
-}
-
-/* Footer */
+/* Footer section */
 .page-footer {
-  margin-top: 25px;
   padding: 50px 20px;
   background: var(--nav-bg);
   color: white;
-}
-
-.page-footer .container {
-  background: transparent;
+  margin-top: 25px;
 }
 
 .page-footer p,
-.page-footer a,
-.page-footer strong {
+.page-footer a {
   color: white;
 }
 
@@ -262,6 +221,29 @@ li {
 
 .page-footer li {
   margin-bottom: 10px;
+}
+
+/* Buttons / special links */
+.link-github,
+.link-guidelines,
+.link-allstyles,
+.link-downloadcss,
+.link-downloadhtml {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 11px 16px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.link-github:hover,
+.link-guidelines:hover,
+.link-allstyles:hover,
+.link-downloadcss:hover,
+.link-downloadhtml:hover {
+  background: var(--accent-dark);
+  text-decoration: none;
 }
 
 /* Skip link */
@@ -281,27 +263,9 @@ li {
 }
 
 /* Desktop layout */
-@media (min-width: 900px) {
-  main .container {
-    display: grid;
-    grid-template-columns: 2.1fr 1fr;
-    gap: 24px;
-  }
-
-  #about,
-  #guidelines,
-  #contribute {
-    grid-column: 1;
-  }
-
-  .profile {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  #styles {
-    grid-column: 2;
-    grid-row: 2;
+@media (min-width: 1200px) {
+  .features {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .page-footer .container {
@@ -311,7 +275,7 @@ li {
   }
 }
 
-/* Small screens */
+/* Smaller screens */
 @media (max-width: 600px) {
   header h1 {
     font-size: 2.2rem;
