@@ -264,3 +264,69 @@ li {
     gap: 20px;
   }
 }
+/* Better heading colors */
+h2,
+h3,
+h4 {
+  color: #1e4f7a;
+}
+
+/* Make article sections feel cleaner */
+article section h2 {
+  border-bottom: 2px solid #d9e7f2;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+/* Improve nav hover and active feel */
+nav a {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Better card spacing */
+.profile h4,
+#styles h2,
+.page-footer p:first-child {
+  margin-bottom: 15px;
+}
+
+/* Make featured style links stand out */
+.features a {
+  font-weight: bold;
+}
+
+/* Slightly nicer body width on very large screens */
+.container {
+  width: 90%;
+}
+
+/* Readability improvement */
+article section p,
+article section li,
+.profile li,
+.page-footer li {
+  font-size: 1rem;
+}
+
+/* Small screen polish */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+
+  article section,
+  .profile,
+  #styles,
+  .page-footer {
+    margin: 15px auto;
+  }
+}
