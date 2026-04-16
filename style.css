@@ -168,3 +168,99 @@ li {
   border-left: 4px solid var(--accent);
   border-radius: 6px;
 }
+/* Footer section */
+.page-footer {
+  padding: 30px 20px;
+  background: #1f1f1f;
+  color: white;
+}
+
+.page-footer p,
+.page-footer a {
+  color: white;
+}
+
+.page-footer ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.page-footer li {
+  margin-bottom: 10px;
+}
+
+/* Buttons / special links */
+.link-github,
+.link-guidelines,
+.link-allstyles,
+.link-downloadcss,
+.link-downloadhtml {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.link-github:hover,
+.link-guidelines:hover,
+.link-allstyles:hover,
+.link-downloadcss:hover,
+.link-downloadhtml:hover {
+  background: #005fa3;
+  text-decoration: none;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  z-index: 1000;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 900px) {
+  main .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  #about,
+  #guidelines,
+  #contribute {
+    grid-column: 1;
+  }
+
+  .profile {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #styles {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  .page-footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
