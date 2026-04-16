@@ -49,3 +49,50 @@ a:hover {
   margin: auto;
   padding: 20px;
 }
+
+/* Header styles */
+header {
+  background: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+header h2 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Navigation */
+nav {
+  background: #222;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+
+nav li {
+  margin: 5px;
+}
+
+nav a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background: var(--accent);
+  border-radius: 5px;
+}
