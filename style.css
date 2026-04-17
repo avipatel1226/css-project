@@ -27,10 +27,11 @@ body {
   box-sizing: border-box;
 }
 
-/* Page styles */
+/* Page styles + typography */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.7;
+  letter-spacing: 0.2px;
   background: var(--bg-color);
   color: var(--text-color);
 }
@@ -43,6 +44,14 @@ h1, h2, h3, h4 {
 
 h1, h2, h3 {
   font-family: Georgia, "Times New Roman", serif;
+}
+
+h1 {
+  letter-spacing: 1px;
+}
+
+h2 {
+  letter-spacing: 0.5px;
 }
 
 p {
@@ -199,6 +208,15 @@ li {
   padding: 18px;
   border-left: 5px solid var(--accent);
   border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.features li:hover {
+  transform: translateY(-3px);
+}
+
+.features a {
+  font-weight: bold;
 }
 
 /* Footer section */
@@ -244,6 +262,12 @@ li {
 .link-downloadhtml:hover {
   background: var(--accent-dark);
   text-decoration: none;
+}
+
+/* Accessibility focus styles */
+a:focus {
+  outline: 2px dashed var(--accent);
+  outline-offset: 3px;
 }
 
 /* Skip link */
